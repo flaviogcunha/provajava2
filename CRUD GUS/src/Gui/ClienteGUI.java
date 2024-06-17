@@ -60,7 +60,7 @@ public class ClienteGUI extends javax.swing.JFrame {
 
     private void readFromMySQL() {
         String sql = "SELECT cpf, nome, data_de_nascimento, peso, altura FROM cliente;";
-        try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/vendas", "root", "fatec");
+        try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/vendas", "root", "guitarhero");
              Statement stmt = conn.createStatement();
              ResultSet res = stmt.executeQuery(sql)) {
 
@@ -378,7 +378,7 @@ public class ClienteGUI extends javax.swing.JFrame {
         ResultSet res=null;
 
         try{
-            conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/vendas","root","fatec");
+            conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/vendas","root","guitarhero");
 
             stmt= conn.createStatement();
             String sql="SELECT cpf, nome, data_de_nascimento, peso, altura FROM cliente;";

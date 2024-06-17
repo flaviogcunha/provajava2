@@ -1,0 +1,17 @@
+create database vendas;
+use vendas;
+
+create table cliente(
+    cpf varchar(30),
+    nome varchar(50),
+    data_de_nascimento varchar(50),
+    peso int,
+    altura FLOAT
+);
+
+create table weighthist(
+    data varchar(30),
+    altura varchar(50),
+    peso int,
+    cpf varchar(40)
+);

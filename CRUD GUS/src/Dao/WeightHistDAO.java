@@ -66,7 +66,7 @@ public class WeightHistDAO {
     public void salvarPesoHistorico(String cpf, float peso,float altura, LocalDate data) {
         String sql = "INSERT INTO weighthist (cpf, peso, altura, data) VALUES (?, ?, ?, ?)";
 
-        try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/vendas", "root", "fatec");
+        try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/vendas", "root", "guitarhero");
              PreparedStatement stmt = conn.prepareStatement(sql)) {
 
             stmt.setString(1, cpf);
