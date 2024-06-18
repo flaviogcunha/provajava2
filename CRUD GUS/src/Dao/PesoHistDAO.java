@@ -6,7 +6,7 @@
 package Dao;
 
 import Factory.ConnectionFactory;
-import Modelo.WeightHist;
+import Modelo.PesoHist;
 
 import java.sql.*;
 import java.time.LocalDate;
@@ -15,15 +15,15 @@ import java.util.List;
 import javax.swing.JOptionPane;
 import java.sql.Date;
 
-public class WeightHistDAO {
+public class PesoHistDAO {
 
     private Connection connection;
 
-    public WeightHistDAO() {
+    public PesoHistDAO() {
         this.connection = new ConnectionFactory().getConnection(); // Inicializa a conexão corretamente
     }
 
-    public void adicionar(WeightHist historico) {
+    public void adicionar(PesoHist historico) {
         String sql = "INSERT INTO weighthist (data,altura , peso, cpf) VALUES (?, ?, ?)";
         try {
             PreparedStatement stmt = connection.prepareStatement(sql);
@@ -38,14 +38,14 @@ public class WeightHistDAO {
         }
     }
 
-    public List<WeightHist> consultarPorCliente(String cpfAluno) {
-    List<WeightHist> historicos = new ArrayList<>();
+    public List<PesoHist> consultarPorCliente(String cpfAluno) {
+    List<PesoHist> historicos = new ArrayList<>();
     String sql = "SELECT * FROM weighthist WHERE cpf = ?";
     try (PreparedStatement stmt = connection.prepareStatement(sql)) {
         stmt.setString(1, cpfAluno);
         try (ResultSet rs = stmt.executeQuery()) {
             while (rs.next()) {
-                WeightHist historico = new WeightHist();
+                PesoHist historico = new PesoHist();
                 // Obtendo a data como java.sql.Date
                 Date dataSql = rs.getDate("data");
                 // Convertendo java.sql.Date para LocalDate
@@ -66,7 +66,7 @@ public class WeightHistDAO {
     public void salvarPesoHistorico(String cpf, float peso,float altura, LocalDate data) {
         String sql = "INSERT INTO weighthist (cpf, peso, altura, data) VALUES (?, ?, ?, ?)";
 
-        try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/vendas", "root", "guitarhero");
+        try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/vendas", "root", "klewsgkjgrtg");
              PreparedStatement stmt = conn.prepareStatement(sql)) {
 
             stmt.setString(1, cpf);

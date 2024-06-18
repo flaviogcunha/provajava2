@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Modelo;
-import Dao.WeightHistDAO;
+import Dao.PesoHistDAO;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
@@ -12,16 +12,16 @@ import java.time.format.DateTimeFormatter;
  * @author conta
  */
 
-public class WeightHist {
+public class PesoHist {
     private LocalDate dataCadastro; // Data de registro do peso
     private double altura;
     private double peso;
     private String cpfAluno;
     
 
-    public WeightHist() {}
+    public PesoHist() {}
 
-    public WeightHist(LocalDate dataCadastro, double altura, double peso, String cpfAluno) {
+    public PesoHist(LocalDate dataCadastro, double altura, double peso, String cpfAluno) {
         this.dataCadastro = dataCadastro;
         this.peso = peso;
         this.cpfAluno = cpfAluno;
