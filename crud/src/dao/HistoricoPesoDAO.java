@@ -27,7 +27,7 @@ public class HistoricoPesoDAO {
     public void salvarPesoHistorico(String cpf, double peso,double altura, LocalDate data) throws SQLException {
         String sql = "INSERT INTO historico_peso (cpf, peso, altura, data) VALUES (?, ?, ?, ?)";
 
-        try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/escola", "root", "Corinthians13");
+        try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/escola", "root", "klewsgkjgrtg");
              PreparedStatement stmt = conn.prepareStatement(sql)) {
 
             stmt.setString(1, cpf);

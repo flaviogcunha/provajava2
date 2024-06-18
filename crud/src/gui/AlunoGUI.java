@@ -137,13 +137,6 @@ public class AlunoGUI extends javax.swing.JFrame {
         jTextField4.setText("");
         jTextField5.setText("");
     }
-    
-
-
-
-    
-
-    
     private String formatDecimalString(String input){
         return input.replace(',','.');
     }
@@ -166,7 +159,7 @@ public class AlunoGUI extends javax.swing.JFrame {
         ResultSet rs=null;
         
         try{
-            conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/escola", "root", "Corinthians13");
+            conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/escola", "root", "klewsgkjgrtg");
             
             stmt= conn.createStatement();
             String sql="SELECT * FROM aluno";
@@ -701,7 +694,7 @@ public class AlunoGUI extends javax.swing.JFrame {
         ResultSet rs=null;
         
         try{
-            conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/escola", "root", "Corinthians13");
+            conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/escola", "root", "klewsgkjgrtg");
             
             stmt= conn.createStatement();
             String sql="SELECT * FROM aluno";

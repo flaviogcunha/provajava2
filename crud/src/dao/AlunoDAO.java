@@ -33,7 +33,7 @@ public class AlunoDAO {
     ResultSet rs = null;
     
     try {
-        conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/escola", "root", "Corinthians13");
+        conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/escola", "root", "klewsgkjgrtg");
         
         String sql = "SELECT COUNT(*) FROM aluno WHERE cpf = ?";
         stmt = conn.prepareStatement(sql);
